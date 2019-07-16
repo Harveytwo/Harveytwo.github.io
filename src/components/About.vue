@@ -3,9 +3,7 @@
     <section class="about-contact">
       <a href="https://github.com/Harveytwo">Github</a>
       <!-- ·
-      <a href="mailto:jrainlau@gmail.com">Email</a>
       ·
-      <a href="https://www.instagram.com/jrainlau/">Instagram</a>
       ·
       懶得備案 -->
     </section>
