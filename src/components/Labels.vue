@@ -64,7 +64,7 @@ export default {
     margin: 0;
     padding: @gapOuter;
     padding-right: 0;
-    height: 50px;
+    /* height: 50px; */
     box-sizing: border-box;
     font-weight: normal;
     border-bottom: 1px solid @firstBorderColor;
@@ -77,7 +77,9 @@ export default {
 }
 
 .label {
-  margin-right: @gapInner;
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: 5px;
   padding: 2px @gapInner;
   color: #fff;
   border-radius: 3px;
