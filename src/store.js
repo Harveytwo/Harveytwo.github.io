@@ -7,7 +7,7 @@ import { GetArticles, GetUserInfo } from './gglQueries'
 const API_DOMAIN = 'https://api.github.com'
 const REPO_URL = `${API_DOMAIN}/repos/Harveytwo/the-game-blog`
 const SERVER = 'https://api.Harveytwo.now.sh/github'
-// const SERVER = 'http://localhost:3000/github'
+// const SERVER = 'http://localhost:8080/github'
 
 export const $fetch = ({ url, method = 'get', data, headers = {} }) => {
   const option = {
