@@ -1,6 +1,6 @@
 export const GetArticles = (nextPage) => `
 {
-  repository(owner: "Harveytwo", name: "Harveytwo.github.io") {
+  repository(owner: "Harveytwo", name: "the-game-blog") {
     issues(${nextPage} filterBy: {createdBy: "Harveytwo",states: OPEN}, orderBy: {field: CREATED_AT, direction: DESC}, first: 100) {
       pageInfo {
         hasNextPage
