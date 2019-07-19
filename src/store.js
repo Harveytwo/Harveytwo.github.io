@@ -6,8 +6,8 @@ import { GetArticles, GetUserInfo } from './gglQueries'
 
 const API_DOMAIN = 'https://api.github.com'
 const REPO_URL = `${API_DOMAIN}/repos/Harveytwo/the-game-blog`
-const SERVER = 'https://api.Harveytwo.now.sh/github'
-// const SERVER = 'http://localhost:8080/github'
+const SERVER = 'https://express.1656417255.now.sh/api/oauth.js'
+// const SERVER = 'http://localhost:3000/api/oauth.js'
 
 export const $fetch = ({ url, method = 'get', data, headers = {} }) => {
   const option = {
@@ -238,12 +238,52 @@ export default new Vuex.Store({
       dispatch('getReactions', { number, autoCommit: true })
     },
     async githubAuth (_, code) {
+      // const method = 'get'
+      // const headers = {}
+      // const data = { code }
+      // const option = {
+      //   SERVER,
+      //   method,
+      //   ...(method === 'post' ? { data } : null),
+      //   ...(method === 'get' ? { params: data } : null),
+      //   headers: {
+      //     ...(localStorage.getItem('github_token') ? { 'Authorization': localStorage.getItem('github_token') } : null),
+      //     ...headers
+      //   }
+      // }
+      // return axios(option).then(({ status, data }) => {
+      //   return {
+      //     status,
+      //     data
+      //   }
+      // }).catch((e) => {
+      //   console.log('----', e)
+      //   return e
+      // })
       const { data } = await $fetch({
         url: SERVER,
         data: {
           code
         }
-      }).catch(e => e)
+      }).catch(e => {
+        console.log(e)
+        return e
+      })
+      // alert(232)
+      // let data
+      // $fetch({
+      //   url: SERVER,
+      //   data: {
+      //     code
+      //   }
+      // }).then(res => {
+      //   data = res
+      //   console.log('______')
+      // }).catch(e => {
+      //   console.log(e)
+      //   return e
+      // })
+      console.log(data)
       return data
     }
   }

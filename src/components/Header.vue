@@ -82,7 +82,8 @@ export default {
       this.keyword = ''
     },
     loginWithGithub () {
-      location.href = 'https://github.com/login/oauth/authorize?client_id=Iv1.886a4ad470aa674d&redirect_uri=https://blog.nankio.cn'
+      // location.href = 'https://github.com/login/oauth/authorize?client_id=Iv1.886a4ad470aa674d&redirect_uri=https://blog.nankio.cn'
+      location.href = 'https://github.com/login/oauth/authorize?client_id=Iv1.886a4ad470aa674d&redirect_uri=http://localhost:8080'
     }
   }
 }
